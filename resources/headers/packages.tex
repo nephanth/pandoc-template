@@ -1,0 +1,34 @@
+% \usepackage[nonatbib]{resources/headers/neurips_2020}
+
+\usepackage{xcolor}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+\SetKwProg{Init}{initialization: }{}{}
+
+
+%%%% pandoc-fignos: required package
+\usepackage{caption}
+\usepackage{environ}
+
+%% pandoc-fignos: environment to disable figure caption prefixes
+\makeatletter
+\newcounter{figno}
+\newenvironment{fignos:no-prefix-figure-caption}{
+  \caption@ifcompatibility{}{
+    \let\oldthefigure\thefigure
+    \let\oldtheHfigure\theHfigure
+    \renewcommand{\thefigure}{figno:\thefigno}
+    \renewcommand{\theHfigure}{figno:\thefigno}
+    \stepcounter{figno}
+    \captionsetup{labelformat=empty}
+  }
+}{
+  \caption@ifcompatibility{}{
+    \captionsetup{labelformat=default}
+    \let\thefigure\oldthefigure
+    \let\theHfigure\oldtheHfigure
+    \addtocounter{figure}{-1}
+  }
+}
+\makeatother

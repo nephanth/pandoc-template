@@ -1,0 +1,16 @@
+include-in-header:
+    # - resources/headers/theorem-header.tex
+    - resources/headers/math-header.tex
+    - resources/headers/packages.tex
+cite-method: biblatex
+listings: true
+standalone: true
+number-sections: true
+filters:
+  - resources/pandoc/pandoc-theorem-exe
+  - pandoc-eqnos
+
+metadata:
+  colorlinks: true
+  bibliography: "resources/bibliography.bib"
+  biblatexoptions: [backend=biber]

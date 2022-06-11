@@ -1,0 +1,6 @@
+defaults:
+  - resources/pandoc/defaults.yaml
+
+to: latex
+include-in-header:
+    - resources/headers/theorem-header.tex

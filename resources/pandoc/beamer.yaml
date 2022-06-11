@@ -1,0 +1,7 @@
+defaults:
+  - resources/pandoc/defaults.yaml
+
+to: beamer
+
+metadata:
+  theme: "Berkeley"
