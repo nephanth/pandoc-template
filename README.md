@@ -1,6 +1,11 @@
 # My pandoc markdown template
 
-I use it to write reports and beamer slides
+I use it to write reports and beamer slides in [pandoc markdown](https://pandoc.org/MANUAL.html#pandocs-markdown). Just set the `TYPE` variable in the Makefile to switch between the two
+
+Needs
+- pandoc
+- python
+- [pandoc-eqnos](https://github.com/tomduck/pandoc-eqnos)
 
 
 ## Acknowledgements
